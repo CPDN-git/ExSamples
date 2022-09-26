@@ -1,0 +1,6 @@
+1. Run batch_get_from_mass.sh several times to extract all tar files to temporary datadir and untar
+2. Run batch_extract_data.sh for each batch to extract the data we want
+3. Run batch_merge_netcdf.sh for each batch and item5216_monthly_mean first of all. This is the field that will have most members as monthly means validate better. For other variables, ensemble members that do not have a valid pr_monthly field are omitted.
+4. Run batch_merge_regions.sh for each variable and item5216_monthly_mean
+5. Run batch_merge_netcdf.sh for each batch and variable.
+6. Run batch_merge_regions.sh for each variable and sub-region to make the usable product
